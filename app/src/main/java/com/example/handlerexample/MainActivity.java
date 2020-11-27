@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private long sTime = 0L;
 
     // Обработчик на нишката - обновява информацията за времето
-    private Handler handler = new Handler();
+    private final Handler handler = new Handler();
 
     // Компонент за представяне информацията за времето
     TextView tvInfo;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Това е фоновата задача (Runnable)
-    private Runnable timeUpdater = new Runnable() {
+    private final Runnable timeUpdater = new Runnable() {
         @Override
         public void run() {
             // Изчисляваме времето
