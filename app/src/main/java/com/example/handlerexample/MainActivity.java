@@ -2,6 +2,7 @@ package com.example.handlerexample;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private long sTime = 0L;
 
     // Обработчик на нишката - обновява информацията за времето
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.myLooper());
 
     // Компонент за представяне информацията за времето
     TextView tvInfo;
