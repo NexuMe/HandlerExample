@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private long sTime = 0L;
 
     // Обработчик на нишката - обновява информацията за времето
-    private final Handler handler = new Handler(Looper.myLooper());
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     // Компонент за представяне информацията за времето
     TextView tvInfo;
